@@ -21,7 +21,7 @@ class User
     #[ORM\Column(length: 255)]
     private ?string $password = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: 'json')]
     private ?string $roles = null;
 
     #[ORM\Column(length: 255)]
@@ -73,12 +73,15 @@ class User
         return $this;
     }
 
-    public function getRoles(): ?string
+    public function getRoles(): string
     {
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+
         return $this->roles;
     }
 
-    public function setRoles(string $roles): static
+    public function setRoles(string $roles): self
     {
         $this->roles = $roles;
 
