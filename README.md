@@ -39,14 +39,14 @@ Requête pour fair une réservation: </br>
  "userId": 3 </br>
  }
 
-ROUTES:
+ROUTES: </br>
 
-User : 
+User :  </br>
 http://127.0.0.1:8000/user/create Post </br>
 http://127.0.0.1:8000/user/{id}    Get </br>
 http://127.0.0.1:8000/user/{id}  Delete </br>
 
-réservation : 
+réservation :  </br>
 http://127.0.0.1:8000/reservation/create  Post </br>
 http://127.0.0.1:8000/reservations  Get </br>
 http://127.0.0.1:8000/reservation/{id} Delete </br>
